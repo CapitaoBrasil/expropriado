@@ -1,0 +1,3961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>/expropriado/ &amp; /bantifa/ - gamer-girl-water</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #ffffff;
+    color: #747f8d;
+}
+
+a {
+    color: #00b0f4;
+}
+
+.spoiler {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pre {
+    background-color: #f9f9f9 !important;
+}
+
+.pre--multiline {
+    border-color: #f3f3f3 !important;
+    color: #657b83 !important;
+}
+
+.mention {
+    background-color: #f1f3fb;
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #2f3136;
+}
+
+.info__channel-name {
+    color: #2f3136;
+}
+
+.info__channel-topic {
+    color: #2f3136;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: #eceeef;
+}
+
+.chatlog__author-name {
+    color: #2f3136;
+}
+
+.chatlog__timestamp {
+    color: #99aab5;
+}
+
+.chatlog__edited-timestamp {
+    color: #99aab5;
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(249, 249, 249, 0.3);
+    border-color: rgba(204, 204, 204, 0.3);
+}
+
+.chatlog__embed-author-name {
+    color: #4f545c;
+}
+
+.chatlog__embed-author-name-link {
+    color: #4f545c;
+}
+
+.chatlog__embed-title {
+    color: #4f545c;
+}
+
+.chatlog__embed-description {
+    color: #737f8d;
+}
+
+.chatlog__embed-field-name {
+    color: #36393e;
+}
+
+.chatlog__embed-field-value {
+    color: #737f8d;
+}
+
+.chatlog__embed-footer {
+    color: rgba(79, 83, 91, 0.4);
+}
+
+.chatlog__reaction {
+    background-color: rgba(79, 84, 92, 0.06);
+}
+
+.chatlog__reaction-count {
+    color: #99aab5;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/567170846033182740/6db03210048affaee5a2ee0a09b68278.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">/expropriado/ &amp; /bantifa/</div>
+        <div class="info__channel-name">gamer-girl-water</div>
+        
+            <div class="info__channel-topic">Videogames, para treinar m&#233;todos de cortar cabe&#231;as burguesas e gerenciar uma comuna</div>
+
+        <div class="info__channel-message-count">283 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ae, red faction &#233; bom ou &#233; propaganda imperialista</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tava pensando em jogar mas vai que &#233; merda</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">e algu&#233;m tem um jogo bom de politica?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(fora civilization)</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(coloquem links de pirat&#245;es aqui <img class="emoji " alt="kimjongun" title="kimjongun" src="https://cdn.discordapp.com/emojis/582724521396666388.png" /> )</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808">Deleted User</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:29 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">q piratao oq rapaiz
+tem que pagar
+(Emoji do Porky)</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Joguem empire earth 2</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#233; daora, mas eu queria algo atual</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tem o Geo-Political Simulator, mas esse jogo come o cu de quem n&#227;o &#233; liberal</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808">Deleted User</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Jogo atual &#233; merda</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sla
+Hearts of Iron 4</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">e fica f&#225;cil de terminar depois que tu pega as manhas</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808">Deleted User</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tu pode jogar como comunista e dominar o mundo kkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">que represente o cen&#225;rio atual, n&#227;o atual no quesito &quot;lan&#231;amento&quot;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">parece interessante</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">mas &#233; muito focado em guerra</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808">Deleted User</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ue
+E bem loko
+Tu pode construir fabricas e dar um boost na economia e ai fazer um exercito grande</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">acho que vou ter que baixar o civilization msm</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808">Deleted User</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Divis&#227;o motorizada kkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu tava assistindo um video de civ 6 e achei daora, da&#237; eu fui olhar o canal dele e o v&#237;deo logo em baixo desse tinha &quot;All nations become communist | Hearts of Iron IV &quot;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">vou piratear</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">digo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">comprar</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:51 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://www.skidrowcodex.net/hearts-of-iron-iv-man-the-guns-codex/">https://www.skidrowcodex.net/hearts-of-iron-iv-man-the-guns-codex/</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">caiu do caminh&#227;o</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808">Deleted User</span>
+                <span class="chatlog__timestamp">26-Jun-19 06:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">conseguiu instalar?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/147034367649120256/7eba645ae4b0e237d7620c2575887958.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="alisao#1901" data-user-id="147034367649120256">alisao</span>
+                <span class="chatlog__timestamp">11-Jul-19 04:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">RED ORCHESTRA OTIMO JOGO</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">PRA JOGAR DE SOVIETICO E MATAR NAZISTA!</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">n&#227;o tem aquela propaganda anti-sovietica</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">11-Jul-19 04:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkkkkkkkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/147034367649120256/7eba645ae4b0e237d7620c2575887958.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="alisao#1901" data-user-id="147034367649120256">alisao</span>
+                <span class="chatlog__timestamp">11-Jul-19 04:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">e os mapas s&#227;o bem trabalhados etc</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#233; velho</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">mas de vez em quando entra em promo&#231;&#227;o</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">e e os servidores americanos geralmente est&#227;o cheios, ou quase</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ent&#227;o sempre da pra jgoar</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/212079648853458945/27674834e3e8c23cd52139e9d4857bc3.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Batushka#7246" data-user-id="212079648853458945">Batushka</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:18 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tem aquele velho Call of Duty 2 e a campanha sovi&#233;tica</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 01:18 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Call of Duty s&#243; &#233; bom no zombies</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mentira, a campanha &#233; legal tamb&#233;m</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Multiplayer &#233; chato</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 08:39 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Algu&#233;m conhece Warframe?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">A expans&#227;o Fortuna tem um tema abertamente anticapitalista.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">19-Jul-19 08:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Bom dia</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 08:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/mPTCq3LiZSE">https://youtu.be/mPTCq3LiZSE</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/PlayWarframe">PlayWarframe</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/mPTCq3LiZSE"><span class="markdown">Warframe | We All Lift Together</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Cold: the air and water flowing. Hard: the land we call our home. Push to keep the dark from coming, Feel the weight of what we owe. This: the song of sons a...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/mPTCq3LiZSE/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/mPTCq3LiZSE/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">19-Jul-19 08:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Joguei um pouco de Warframe</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#201; bacana</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 08:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Essa chain gang song &#233; flagrantemente um ode &#224; classe oper&#225;ria</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 11:07 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Call of duty &#233; bom s&#243; no online, campanha &#233; muito chato</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 11:56 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="JPEGboy#1523">@JPEGboy</span> E o modo zumbi?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Legal?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 11:58 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Modo zumbi &#233; 10/10</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">BOA</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">S&#243; n&#227;o gostei muito das mec&#226;nicas colocadas nos novos jogos</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">BO4 e BO3</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O sistema de gobblegum</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:04 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu joguei apenas at&#233; o BO2</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O que &#233; isso</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:04 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">No modo zumbi do BO3 colocaram um sistema de gobblegum</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Umas bolinhas que d&#227;o habilidades especiais</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E que s&#227;o sorteadas em uma m&#225;quina</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">A primeira vez voc&#234; gasta 0 pontos</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E tipo...tem muitas bolinhas extremamente poderosas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tem uma que se voc&#234; pegar ela, voc&#234; ganha todos os perks</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Carai</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sim</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#201; tipo as m&#225;quinas no BO2</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Qual m&#225;quina do BO2?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">M&#225;quinas do modo zombie, do qual tem “Root Beer” que te deixa mais forte</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ou a fast reload soda</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah sim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Juggernog</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Etc</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isso</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Na verdade &#233; parecido mas &#233; diferente</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">As bolinhas s&#227;o sorteadas</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Caralho que saudade de jogar BO2</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas para obter bolinhas novas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Voc&#234; gasta dinheiro real</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tipo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Bolinhas para dar unlock</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E poder ser usadas em jogo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O jogo j&#225; &#233; caro, e tu tem que liberar mais bolinhas</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ou ent&#227;o jogando voc&#234; ganha tamb&#233;m</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o sei se &#233; assim ou n&#227;o</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o cheguei a jogar</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas isso estraga o jogo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vcs jogam em console? Ou em PC</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu jogo no Xbox One</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu jogava na casa de um amigo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas pretendo comprar para PC</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas tamb&#233;m tenho Pc, 3ds, 360 e psp</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas ent&#227;o</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Imagina a situa&#231;&#227;o</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Voc&#234; come&#231;a o jogo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Round I</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vai na m&#225;quina de bolinhas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E pega a perkaholic</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Que voc&#234; ganha todos os perks</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Pqp</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Juggernog, double tap, etc etc</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Da&#237; o jogo acaba</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E tem limite de rounds no BO3</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Fica izi</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vai s&#243; at&#233; o 255</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O round 255 &#233; um round infinito</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah eu nunca chegaria at&#233; l&#225;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas ter limite &#233; uma merda</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Era foda no WAW</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Que podia subir ao infinito</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O n&#250;mero de rounds</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#201; legal tamb&#233;m os rounds de instakill</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Que o jogo bugava em certos rounds</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E a vida dos zumbis ficava negativa</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ent&#227;o dava para dar instakill</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isso em rounds bem elevados</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Acima dos 100</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas ent&#227;o <span class="mention" title="JPEGboy#1523">@JPEGboy</span></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ai no BO4</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O modo zumbi deu uma mudada</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O que mudou?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O modo que os zumbis te perseguem</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Fica mais dif&#237;cil fazer juking agora</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah, acho ok isso</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:15 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ou seja, se voc&#234; ficar encurralado em um canto</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Praticamente j&#225; era</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O spawn dos zumbis mudou tamb&#233;m</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Se voc&#234; muda para uma &#225;rea nova do mapa</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Os zumbis n&#227;o v&#227;o estar spawnados dentro das janelas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">J&#225; est&#227;o praticamente fora</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Esses novos jogos tem tipo um transit?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ou seja, voc&#234; sempre vai dar de encontro com zumbis quando entrar em novas &#225;reas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o tem tranzit</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">A comunidade n&#227;o gosta do tranzit</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">:P</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:17 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah era m&#243; legal</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:17 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas ent&#227;o, no BO4 ainda tem o neg&#243;cio de bolinhas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Gobblegums</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas &#233; menos OP</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Por&#233;m os mapas ficaram sem gra&#231;a</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">No BO3 tinha uns mapas legais</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">No BO4 n&#243;s temos um novo mob of the dead</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Um novo Origins (acho que &#233; no BO4...ou no BO3?? Ah, BO4)</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Na verdade n&#227;o &#233; novo o Origins</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#201; a mesma merda s&#243; que com bolinha</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E o famoso mapa do BO1</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Five, fives</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">P&#244; aquele mapa do BO1 era show</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sei l&#225; se tem S</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ou n&#227;o</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas &#233; o mapa que tem uns pol&#237;ticos famosos</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E p&#225;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tem tamb&#233;m mapa do titanic no BO4</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas os mapas novos do BO4 s&#227;o meio uhhh....chatos</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Voc&#234; precisa fazer aqueles &quot;easter eggs&quot; para conseguir coisas essenciais para o jogo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ent&#227;o voc&#234; acaba sendo for&#231;ado a completar eles</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:26 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah que merda, depois do BO2 o jogo ficou meio merda aparentemente</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="JPEGboy#1523">@JPEGboy</span> Ei, qual seu mapa favorito de BO2?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Aquele barco, n&#227;o lembro o nome</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu sinceramente adoro o origins</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o me lembro desse do barco</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:30 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/593234016078135322/601798088616837120/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/593234016078135322/601798088616837120/image0.jpg" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah sim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Achei que est&#225;vamos falando do modo zumbi</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">:/</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O barco &#233; legal mesmo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas tem tamb&#233;m nuketown</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Que &#233; boa</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah sim, no modo zumbi &#233; a cidade</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah sim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ei</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Que tem o bar, e o banco</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">J&#225; viu um remake que fizeram para o BO3?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Desse mapa?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/LB2J-mYhxCM">https://youtu.be/LB2J-mYhxCM</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCrKQFPxJp812EA6v67A8ubA">PCI Games</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/LB2J-mYhxCM"><span class="markdown">TOWN 2.0 - A CIDADE DO TRANZIT REMAKE - Black Ops 3 - Custom Zombi...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Mais um v&#237;deo de Custom Zombies, dessa vez, vou mostrar mais um mapa maravilhoso, o City 2.0. Espero Que Gostem. <img class="emoji " alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png" /> N&#227;o Esquece do Like. <img class="emoji " alt="👊" title="👊" src="https://twemoji.maxcdn.com/2/72x72/1f44a.png" /> Se inscreve no Cana...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/LB2J-mYhxCM/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/LB2J-mYhxCM/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="JPEGboy#1523">@JPEGboy</span></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Exatamente</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E nesse mapa n&#227;o colocaram a m&#225;quina de gobblegums</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ent&#227;o n&#227;o vai perder a gra&#231;a</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Caralho que Daora</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eles adicionaram coisa novo no mapa tamb&#233;m, achei legal isso</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Partiu Warframe?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vamo l&#225;?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu lembro de ficar abrindo a caixinha pra conseguir a arma sonora (s&#244;nica? Sla)</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Too much conversation, too little action.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Qual plataforma?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">PC</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:43 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Meu pc n&#227;o roda :/</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:43 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">J&#225; tentou?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:43 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Meu pc n&#227;o consegue rodar Minecraft</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o vai rodar warframe</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/589503861363048460/4e9856f15e3d2d8cad3ae24b16075f9d.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ت &#128031;&#128031;&#128031; سلمون#1263" data-user-id="589503861363048460">ت &#128031;&#128031;&#128031; سلمون</span>
+                <span class="chatlog__timestamp">19-Jul-19 12:45 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="JPEGboy#1523">@JPEGboy</span> A quantidade de mapas customizados para o BO3 &#233; imensa</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ent&#227;o talvez at&#233; tenha outros mapas legais refeitos nele</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Por&#233;m n&#227;o cheguei a conferir</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/412146317406502912/f49961b97784d5c61ada3baf4e5c0487.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Dada ill#0591" data-user-id="412146317406502912">Dada ill</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Creeper</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>acabou</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">volta e meia ainda volto pra Minecraft</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tenho um save h&#225; um temp&#227;o</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:26 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/593234016078135322/604152622752202755/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/593234016078135322/604152622752202755/image0.jpg" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:27 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:27 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji emoji--large" alt="kimjongun" title="kimjongun" src="https://cdn.discordapp.com/emojis/582724521396666388.png" /></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:27 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">sorte que ele nunca chegou perto da minha planta&#231;&#227;o semi autom&#225;tica de batata</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:31 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ae, algu&#233;m de vcs tem aquele link maroto de Minecraft pirat&#227;o?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:31 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">bah</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu jogo em console</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">: /</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:32 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ok, ;-;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu tenho um ps4 mas eu compro uns 3 jogos por ano</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:32 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Minecraft &#233; barato</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:32 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#201; muito caro</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ss</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:32 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">se curte j&#225; devia ter comprado</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:33 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">47 pila</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tem outros jogos antes na minha lista</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:33 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:34 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Perdi de comprar Grim Fandango esse m&#234;s pq eu resolvi sair com uma amiga</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:34 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ah</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:34 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O neg&#243;cio tava 11 reais</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:34 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu diria que valeu</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:34 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Quando cheguei em casa e vi que podia ter comprado at&#233; pensei em cortar o pau fora</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:35 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">apesar de eu n&#227;o ter liga&#231;&#227;o nenhuma com Grim Fandango</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:35 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Valeu at&#233; a pena</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:35 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ent&#227;o porra</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">11 reais tu deve comprar Grim Fandango em algum momento</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:36 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah mas o jogo vale a pena por mais tempo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vdd</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:36 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">S&#243; vale a pena por mais tempo se for Rocket League</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">e tenho dito</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:37 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Esse &#233; outro que vale a pena</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:37 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu sei bem kkkkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:37 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Quase comprei mas o cart&#227;o n&#227;o passou huehueh</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:38 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">meu n&#237;vel no xbox &#233; 495</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:38 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Carai</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:38 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu sou meio doente</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:39 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Huehueh nah, o jogo que &#233; viciante</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tu joga Rocket League com amigo?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:39 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">geralmente sim</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:39 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah t&#225; explicado, jogar qualquer coisa com amigo &#233; Daora</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:39 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">mas quando n&#227;o tem ningu&#233;m jogo com aleat&#243;rio pra ficar muito puto</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu sou o cara do online</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tenho mais de 700 horas de BF4</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">mais umas quantas de Diablo 3</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cacete</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Monster Hunter Wolrd</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">World</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">No diablo 3 eu tbm tinha bastante</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Destiny 2</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">GTA Onlinew</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">S&#243; que eu jogava multiplayer local com os par&#231;as</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Agora eu t&#244; pilhado no The Division 2</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu gastei umas 30 horas no destiny</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Achei chato</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tipo o in&#237;cio &#233; Daora</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas depois de um tempo fica repetitivo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas a mec&#226;nica do jogo &#233; pica</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">o primeiro ou o segundo?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">s&#243; joguei o 2</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O segundo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu tbm s&#243; peguei o segundo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">30 horas &#233; pouco kkkk</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">n&#227;o te dou certeza mas devo ter quase 300 horas</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:46 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Huehueh vicio que se chama n&#233;</span>
+
+                                <span class="chatlog__edited-timestamp" title="26-Jul-19 12:47 AM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu t&#244; pilhado pra caralho pra Iceborne do MHW</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ainda n&#227;o joguei esse</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu s&#243; n&#227;o me chamo gamer pq &#233; termo pra arrombado kkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Gamer nem &#233; gente</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O &#250;nico jogo que eu devo ter umas 200 horas &#233; NBA2k19</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu comprei no final do ano passado e joguei pra caralho</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:48 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">bah</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#233; coisa kkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:49 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Dando dinheiro pro basquete imperialista e fazendo papai Marx chorar ;-;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas &#233; o jeito</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Enfim irei dormir</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:49 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:49 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Boa noite meus camaradas</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">26-Jul-19 12:49 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ok</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">boa noite, camarada</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

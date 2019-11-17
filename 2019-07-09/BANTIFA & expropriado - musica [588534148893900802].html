@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BANTIFA &amp; expropriado - musica</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #ffffff;
+    color: #747f8d;
+}
+
+a {
+    color: #00b0f4;
+}
+
+.spoiler {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pre {
+    background-color: #f9f9f9 !important;
+}
+
+.pre--multiline {
+    border-color: #f3f3f3 !important;
+    color: #657b83 !important;
+}
+
+.mention {
+    background-color: #f1f3fb;
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #2f3136;
+}
+
+.info__channel-name {
+    color: #2f3136;
+}
+
+.info__channel-topic {
+    color: #2f3136;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: #eceeef;
+}
+
+.chatlog__author-name {
+    color: #2f3136;
+}
+
+.chatlog__timestamp {
+    color: #99aab5;
+}
+
+.chatlog__edited-timestamp {
+    color: #99aab5;
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(249, 249, 249, 0.3);
+    border-color: rgba(204, 204, 204, 0.3);
+}
+
+.chatlog__embed-author-name {
+    color: #4f545c;
+}
+
+.chatlog__embed-author-name-link {
+    color: #4f545c;
+}
+
+.chatlog__embed-title {
+    color: #4f545c;
+}
+
+.chatlog__embed-description {
+    color: #737f8d;
+}
+
+.chatlog__embed-field-name {
+    color: #36393e;
+}
+
+.chatlog__embed-field-value {
+    color: #737f8d;
+}
+
+.chatlog__embed-footer {
+    color: rgba(79, 83, 91, 0.4);
+}
+
+.chatlog__reaction {
+    background-color: rgba(79, 84, 92, 0.06);
+}
+
+.chatlog__reaction-count {
+    color: #99aab5;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/567170846033182740/6db03210048affaee5a2ee0a09b68278.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">BANTIFA &amp; expropriado</div>
+        <div class="info__channel-name">musica</div>
+        
+
+        <div class="info__channel-message-count">48 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:04 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="hitite#2820">@hitite</span></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">manda</span>
+
+                                <span class="chatlog__edited-timestamp" title="12-Jun-19 10:05 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:05 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">boa</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=_XTcSeh8rfM">https://m.youtube.com/watch?v=_XTcSeh8rfM</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCf3c-F-_TJifZHmgkEmATMA">Marinho</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=_XTcSeh8rfM"><span class="markdown">Marcha dos Tanques de St&#225;lin</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">P&#225;gina: <a href="https://www.facebook.com/BrazilBallOfficial/">https://www.facebook.com/BrazilBallOfficial/</a> Grupo: <a href="https://www.facebook.com/groups/415043612209267/?fref=mentions">https://www.facebook.com/groups/415043612209267/?fref=mentions</a></span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/_XTcSeh8rfM/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/_XTcSeh8rfM/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=l5PLE5xbeAQ">https://m.youtube.com/watch?v=l5PLE5xbeAQ</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/PanEslavoBrasil">TV Eslavo</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=l5PLE5xbeAQ"><span class="markdown">Рабочая Марсельеза (A Marselhesa Oper&#225;ria), hino...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Leia vers&#227;o escrita: <a href="http://fishuk.cc/marselieza">http://fishuk.cc/marselieza</a> &quot;A Marselhesa Oper&#225;ria&quot; foi uma can&#231;&#227;o russa cuja melodia inicialmente era id&#234;ntica &#224; da famosa &quot;Marselhesa&quot;...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/l5PLE5xbeAQ/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/l5PLE5xbeAQ/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=DGIb--joV_w">https://m.youtube.com/watch?v=DGIb--joV_w</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/lgvkunz">GEORGE KUNZ</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=DGIb--joV_w"><span class="markdown">Hino a Internacional Comunista em Portugu&#234;s</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Hino a Internacional Comunista em Portugu&#234;s</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/DGIb--joV_w/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/DGIb--joV_w/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://www.youtube.com/watch?v=xMP-JqFQ_l4">https://www.youtube.com/watch?v=xMP-JqFQ_l4</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/ryanjenner">VGBYS</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=xMP-JqFQ_l4"><span class="markdown">Vengaboys - Boom, Boom, Boom, Boom!! (HD)</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Music video by Vengaboys performing Boom, Boom, Boom, Boom!! (I want you in my room) (C) 1999 Violent Music BV</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/xMP-JqFQ_l4/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/xMP-JqFQ_l4/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">n&#227;o pera</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">heuhueh</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Oi Barbie, Oi Ken
+Vamos dar uma volta?
+Ah, s&#243; porque voc&#234; t&#225; de carro?
+Fala s&#233;rio!
+
+Sou a Barbie Girl
+Se voc&#234; quer ser meu namorado
+Fica ligado
+Presta aten&#231;&#227;o
+Na minha condi&#231;&#227;o
+&#201; diferente
+Sou muito exigente
+Anda Barbie! Vamos Barbie!
+
+Sou a Barbie Girl
+Se voc&#234; quer se meu namorado
+Fica ligado
+Presta aten&#231;&#227;o
+Na minha condi&#231;&#227;o
+&#201; diferente
+Sou muito exigente
+
+Sou assim, uma flor
+Delicada demais
+Minha cor preferida &#233; o rosa
+Uma loura legal
+E que sabe o que quer
+Decidida, fatal, mas dengosa</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N I C E</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">B A R B I E W A V E</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:12 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Bor&#225; chamar os adeptos da M&#233;ritocracia de Barbie</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah, isso a esquerda lacradeira j&#225; faz</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">esqueci disso ueuehehuehueh</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">12-Jun-19 10:13 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=7C0UDxt6uTo">https://m.youtube.com/watch?v=7C0UDxt6uTo</a>
+
+DENG GANG</span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/DeroVolk">DeroVolk</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=7C0UDxt6uTo"><span class="markdown">Parade March of the PLA - &quot;分列式进行曲&quot;</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown"><img class="emoji " alt="●" title="●" src="https://twemoji.maxcdn.com/2/72x72/25cf.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" />ஜ<img class="emoji " alt="۩" title="۩" src="https://twemoji.maxcdn.com/2/72x72/6e9.png" />中文<img class="emoji " alt="۩" title="۩" src="https://twemoji.maxcdn.com/2/72x72/6e9.png" />ஜ<img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="▬" title="▬" src="https://twemoji.maxcdn.com/2/72x72/25ac.png" /><img class="emoji " alt="●" title="●" src="https://twemoji.maxcdn.com/2/72x72/25cf.png" /> 《中國人民解放軍軍歌》，又名為《中國人民解放軍進行曲》，是中國人民解放軍現行軍歌，公木作詞，鄭律成作曲。1939年秋，創作於延安，原名為《...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/7C0UDxt6uTo/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/7C0UDxt6uTo/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=lrWV6pxepDo">https://m.youtube.com/watch?v=lrWV6pxepDo</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCZ9-37vGHavAbQI98fzg91Q">Michael Wei</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=lrWV6pxepDo"><span class="markdown">Chinese Military Song (with lyrics)-When That Day Comes(当那一...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">The video is dedicated to all members of People&#39;s Liberation Army , past , present , and future , with our gratitude. 向过去，现在，未来为中国人民而战的全体中国人民解放军致敬！ Non sub v...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/lrWV6pxepDo/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/lrWV6pxepDo/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=GsTM87wjP88">https://m.youtube.com/watch?v=GsTM87wjP88</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCtXDkrQJ7bqZWAFpR4zBgvg">NinjaMusic</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=GsTM87wjP88"><span class="markdown">DPRK Song - Defend the Headquarters of Revolution [NinjaMusicNC]</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">NinjaMusic No Copyright: Music Without Limits <img class="emoji " alt="➤" title="➤" src="https://twemoji.maxcdn.com/2/72x72/27a4.png" /> Ninja Music Twitter &#187; <a href="https://twitter.com/NinjaMusicNC">https://twitter.com/NinjaMusicNC</a> Facebook &#187; <a href="http://tinyurl.com/y88bf36c">http://tinyurl.com/y88bf36c</a> Soundcloud &#187; ht...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/GsTM87wjP88/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/GsTM87wjP88/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=Xtljy9v3yFE">https://m.youtube.com/watch?v=Xtljy9v3yFE</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/Rumoaohepta7">Rumoaohepta7</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=Xtljy9v3yFE"><span class="markdown">North Korean Moranbong Band: 달려가자 미래로 Dash to the Fu...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">North Korean Moranbong Band: 달려가자 미래로 Dash to the Future (English Translation) The Moranbong Band, also known as Moran Hill Orchestra, is an all-female music...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/Xtljy9v3yFE/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/Xtljy9v3yFE/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">14-Jun-19 10:57 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=Mn1wRbjOPcQ">https://m.youtube.com/watch?v=Mn1wRbjOPcQ</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/Svet90">Svet90</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=Mn1wRbjOPcQ"><span class="markdown">Aviamarch (Авиaмарш)</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Video about Soviet pilot-heroes/heroines in the Great Patriotic War with the March of the Aviators. (Avimarch/Avimarş) Enjoy! WARNING: Any racist comments wi...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/Mn1wRbjOPcQ/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/Mn1wRbjOPcQ/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">14-Jun-19 10:59 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">hey</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">qndo puderem postem as m&#250;sicas daqui neste fio da /expropriado/: <a href="https://8ch.net/expropriado/res/155.html">https://8ch.net/expropriado/res/155.html</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://8ch.net/expropriado/res/155.html"><span class="markdown">/Mu/sica Revolucion&#225;ria - Fio</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">==NT: BANDAS E M&#218;SICOS COM VI&#201;S ESQUERDISTA.==[Expropriado pela equipe de modera&#231;&#227;o]1558792179472Anarquismo Verde</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://media.8ch.net/file_store/thumb/cd77a37f0db68cc2cb888a50eda293ed8f9325c6259273598f79e7485bf2b3fc.jpeg">
+                                                <img class="chatlog__embed-thumbnail" src="https://media.8ch.net/file_store/thumb/cd77a37f0db68cc2cb888a50eda293ed8f9325c6259273598f79e7485bf2b3fc.jpeg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">14-Jun-19 11:01 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Beleza.
+Vou postar l&#225;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">14-Jun-19 11:01 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://www.youtube.com/watch?v=YShH6ux49ac">https://www.youtube.com/watch?v=YShH6ux49ac</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/bandaelefecto">El Efecto</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=YShH6ux49ac"><span class="markdown">El Efecto - &quot;Pedras e sonhos&quot; (videoclipe)</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Aproveitamos a data simb&#243;lica do dia 17/04/2013, na qual se completam 17 anos do massacre de Eldorado dos Caraj&#225;s, para lan&#231;ar nosso novo v&#237;deo. &quot;Pedras e so...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/YShH6ux49ac/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/YShH6ux49ac/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">essa m&#250;sica aqui &#233; fod&#225;stica ali&#225;s</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">14-Jun-19 11:24 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">M&#250;sica Maoista de 1954
+
+Letra(google tradutor)
+
+Quando os campos verdes est&#227;o cobertos de flores amarelas, Presidente Mao veio para a nossa aldeia. Riso alegre derrama de casa em casa, Trov&#227;o da primavera se rendendo ao distrito. Presidente chegou a nossa aldeia Para falar conosco dos camponeses. Para descobrir como vivemos Quantos quintais s&#227;o coletados por hectare. O Presidente levou nossos assuntos a s&#233;rio Ele perguntou o que comemos, o que vestir. Ele perguntou sobre tudo, tudo Ele at&#233; perguntou sobre a escola da aldeia. As palavras do presidente s&#227;o como batidas Seus discursos acendem a luz em nossos cora&#231;&#245;es. Seu sorriso suave Incentiva-nos a construir uma nova vida.</span>
+
+                                <span class="chatlog__edited-timestamp" title="14-Jun-19 11:29 AM">(edited)</span>
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/588534148893900802/589097895001718795/predseda.mp3">
+                                
+                                    Attachment: predseda.mp3 (4,3 MB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">17-Jun-19 01:17 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">unsrer Grenzerkompaniiiiiiiie <img class="emoji " alt="fidelcastro" title="fidelcastro" src="https://cdn.discordapp.com/emojis/582723161720750154.png" /> <img class="emoji " alt="👌" title="👌" src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" /></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">17-Jun-19 01:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Hitite</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tu &#233; nosso dj praticamente kkkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">17-Jun-19 06:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu virei Astronauta ta
+Deixa os garoto brinca deixa os garoto brinca
+Brinca daqui
+Brinca de l&#225;
+Deixa os garoto brinca</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jun-19 07:03 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">18-Jun-19 12:14 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=bhLnsNurNHk">https://m.youtube.com/watch?v=bhLnsNurNHk</a>
+
+Comunismo b&#234;bado &#233; o melhor comunismo</span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/Arbeiterlieder">Arbeiterlieder</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=bhLnsNurNHk"><span class="markdown">Oktoberklub - Was wollen wir trinken</span></a>
+                                            </div>
+
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/bhLnsNurNHk/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/bhLnsNurNHk/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=9RUPYrhRRGM">https://m.youtube.com/watch?v=9RUPYrhRRGM</a></span>
+
+                                <span class="chatlog__edited-timestamp" title="18-Jun-19 12:21 AM">(edited)</span>
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/PanEslavoBrasil">TV Eslavo</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=9RUPYrhRRGM"><span class="markdown">Жить стало лучше (A vida ficou melhor), can&#231;&#227;o de ...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Leia vers&#227;o escrita: <a href="http://fishuk.cc/zhit">http://fishuk.cc/zhit</a> Can&#231;&#227;o sovi&#233;tica de propaganda estatal aludindo aos supostos progressos humanos e sociais da era Stalin nos anos 3...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/9RUPYrhRRGM/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/9RUPYrhRRGM/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">18-Jun-19 12:29 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=3P06EYW-oMM">https://m.youtube.com/watch?v=3P06EYW-oMM</a>
+
+R&#225;dio Norte-Coreana
+
+24:46 - parece m&#250;sica de anime kkkk</span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/rodrigorojo1">NORTH KOREA TODAY</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=3P06EYW-oMM"><span class="markdown">Pyongyang 105.2 FM (Full Musical Program)</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Pyongyang Radio</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/3P06EYW-oMM/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/3P06EYW-oMM/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">19-Jun-19 09:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=uXSCFuuMO6Q">https://m.youtube.com/watch?v=uXSCFuuMO6Q</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/PchanKingOfGETs">GETchan</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=uXSCFuuMO6Q"><span class="markdown">Песма Милиционара - Pesma Milicionara (Song of the...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">I included this song in the &quot;10 Hours of Yugoslav Communist Music&quot; video, but it&#39;s about 7 hours in, so I figured I&#39;d post it for those who won&#39;t make it tha...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/uXSCFuuMO6Q/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/uXSCFuuMO6Q/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">22-Jun-19 09:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Lol nem m&#250;sica socialista &#233;
+Mas &#233; mo legal
+Can&#231;&#245;es da era napole&#244;nica possuem uma est&#233;tica muito boa</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vivat in aeternum &#233; simplesmente uma obra de arte</span>
+
+                                <span class="chatlog__edited-timestamp" title="22-Jun-19 09:34 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://m.youtube.com/watch?v=AFj0e5dwkwE">https://m.youtube.com/watch?v=AFj0e5dwkwE</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/JHBernardo">JHBernardo</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://m.youtube.com/watch?v=AFj0e5dwkwE"><span class="markdown">ROZE, Abb&#233; - Vivat, vivat in aeternum for Napoleon&#180;s coronation</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">The day of Napoleon&#39;s coronation, (2 December, 1804) Napoleon then took Josephine&#39;s crown, made as if to place it upon his own head and then crowned the empr...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/AFj0e5dwkwE/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/AFj0e5dwkwE/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">22-Jun-19 09:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Alias a est&#233;tica napole&#244;nica e linda 
+Meu sonho ter um musket da &#233;poca
+Que arma sexy</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268214441592487936/5246282b5c8d1ee1a399b3684b3ecef6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Petonio#8161" data-user-id="268214441592487936">Petonio</span>
+                <span class="chatlog__timestamp">22-Jun-19 09:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O cara curtia uma pegada greco-romana</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E mandou a igreja pro caralho</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Era um baixinho da pesada</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">23-Jun-19 09:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/gGclRydi1NY">https://youtu.be/gGclRydi1NY</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/rodrigorojo1">NORTH KOREA TODAY</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/gGclRydi1NY"><span class="markdown">North Korean Song: &quot;Korea does what It is Determined to Do!&quot;</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Korean title: 조선은 결심하면 한다 Korean lyrics: 조선은 결심하면 한다 조선은 한다면 한다 주체의 사희주의를 우리 어떻게 총대로 지키는가를 세계여 보라 조선은 결심하면 한다 조선은 한다면 한다 장군님 백승...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/gGclRydi1NY/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/gGclRydi1NY/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/JFjk4_3A3xM">https://youtu.be/JFjk4_3A3xM</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/overwatch16">Songs from the DPRK</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/JFjk4_3A3xM"><span class="markdown">North Korean Song: The soldiers answered</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Korean title: 병사들은 대답했네 Korean lyrics: 응-... 응-... 아-... 아-... 노도치는 철의 대오 근위사단 행군길에 경애하는 그이 병사들을 찾으셨네 동무들 싸움에 자신있는 가고 장군님 다정히 물어보실 때 병사들은 ...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/JFjk4_3A3xM/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/JFjk4_3A3xM/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/513138601543073802/33c131d2ed675374b4a81f7b2edca2f8.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="hitite#2820" data-user-id="513138601543073802">hitite</span>
+                <span class="chatlog__timestamp">24-Jun-19 10:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/-N_2qjqZJMA">https://youtu.be/-N_2qjqZJMA</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCFqrvac3eUlp_4MmhelAaDw">Socialist East</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/-N_2qjqZJMA"><span class="markdown">김일성장군의 노래! Song of General Kim Il-Sung! (English L...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">&quot;김일성장군의 노래&quot;는 퍼레이드와 다큐멘터리에서 TV, 퍼레이드, 김일성 영원한 대통령을 찬양하는 데 널리 사용되는 조선족의 노래이다. 1946 년 김원균이 작곡 한 것으로, 두 개의 광명 성 위성 시험에서 가장...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/-N_2qjqZJMA/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/-N_2qjqZJMA/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">24-Jun-19 11:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N &#233; comuna mas &#233; linda:
+
+<a href="https://www.youtube.com/watch?v=d-Jn7igEiYw">https://www.youtube.com/watch?v=d-Jn7igEiYw</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=d-Jn7igEiYw"><span class="markdown">Cthulhu Rise - Opus 32 HD (Album Track)</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">New track <a href="https://www.youtube.com/watch?v=HcCdC312xz0">https://www.youtube.com/watch?v=HcCdC312xz0</a> Cthulhu Rise - Opus 32 HD (Album Track) Full Album: <a href="https://www.youtube.com/watch?v=6EHcEVVYPmE&list=PL">https://www.youtube.com/watch?v=6EHcEVVYPmE&amp;list=PL</a>...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/d-Jn7igEiYw/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/d-Jn7igEiYw/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="SaitamaSolaDBZ#3251" data-user-id="567495130529923084">SaitamaSolaDBZ</span>
+                <span class="chatlog__timestamp">25-Jun-19 09:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">se for assim eu tb boto coisa n&#227;o comuna kkkk</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://www.youtube.com/watch?v=jOGu05q-Ch4">https://www.youtube.com/watch?v=jOGu05q-Ch4</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/BethesdaSoftworks">Bethesda Softworks</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=jOGu05q-Ch4"><span class="markdown">Prey – Original Game Soundtrack – “Mind Game”</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Song Name: &quot;Mind Game&quot; Composed by Raphael Colantonio, production and electronics by Matt Piersal Album: Prey Original Game Soundtrack Learn more about the m...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/jOGu05q-Ch4/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/jOGu05q-Ch4/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/480943517351280660/7f24ea5a374f0907a01fb312cf1911cc.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="7knives#7810" data-user-id="480943517351280660">7knives</span>
+                <span class="chatlog__timestamp">27-Jun-19 03:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/o2o4Nmq_mTQ">https://youtu.be/o2o4Nmq_mTQ</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/tyrlop">DPRK Video Archive</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/o2o4Nmq_mTQ"><span class="markdown">Singing songs of reunification in Seoul [Subtitles]</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">From the Samjiyon Orchestra Seoul Concert on February the 8th 2018. Korean title: 삼지연관현악단 서울공연 English Subtitles On stage were Hyon Song Wol (현송월) and Song Y...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/o2o4Nmq_mTQ/hqdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/o2o4Nmq_mTQ/hqdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

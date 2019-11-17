@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>/expropriado/ &amp; /bantifa/ - kooper&#225;cija</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #ffffff;
+    color: #747f8d;
+}
+
+a {
+    color: #00b0f4;
+}
+
+.spoiler {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pre {
+    background-color: #f9f9f9 !important;
+}
+
+.pre--multiline {
+    border-color: #f3f3f3 !important;
+    color: #657b83 !important;
+}
+
+.mention {
+    background-color: #f1f3fb;
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #2f3136;
+}
+
+.info__channel-name {
+    color: #2f3136;
+}
+
+.info__channel-topic {
+    color: #2f3136;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: #eceeef;
+}
+
+.chatlog__author-name {
+    color: #2f3136;
+}
+
+.chatlog__timestamp {
+    color: #99aab5;
+}
+
+.chatlog__edited-timestamp {
+    color: #99aab5;
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(249, 249, 249, 0.3);
+    border-color: rgba(204, 204, 204, 0.3);
+}
+
+.chatlog__embed-author-name {
+    color: #4f545c;
+}
+
+.chatlog__embed-author-name-link {
+    color: #4f545c;
+}
+
+.chatlog__embed-title {
+    color: #4f545c;
+}
+
+.chatlog__embed-description {
+    color: #737f8d;
+}
+
+.chatlog__embed-field-name {
+    color: #36393e;
+}
+
+.chatlog__embed-field-value {
+    color: #737f8d;
+}
+
+.chatlog__embed-footer {
+    color: rgba(79, 83, 91, 0.4);
+}
+
+.chatlog__reaction {
+    background-color: rgba(79, 84, 92, 0.06);
+}
+
+.chatlog__reaction-count {
+    color: #99aab5;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/567170846033182740/6db03210048affaee5a2ee0a09b68278.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">/expropriado/ &amp; /bantifa/</div>
+        <div class="info__channel-name">kooper&#225;cija</div>
+        
+            <div class="info__channel-topic">Canal para projetos conjuntos dos mais diversos - pau no c&#250; dos ancaps e viva nossa uni&#227;o de ego&#237;stas!</div>
+
+        <div class="info__channel-message-count">142 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">q</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Este &#233; o canal para projetos conjuntos</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Discutir planos, colabora&#231;&#245;es, p&#225;ginas, &quot;raids&quot;, t&#225;ticas, etc etc.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ah ss</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">abro pros camaradas?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">A gente adiciiona de pouco em pouco quem tiver interesse e for de confian&#231;a</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ok</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">24-Jul-19 10:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">J&#225; vou adicionar alguns que trabalham em p&#225;ginas</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">25-Jul-19 03:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E l&#225; vamos n&#243;s</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/604017233647108198/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/604017233647108198/unknown.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">25-Jul-19 07:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Fingers crossed</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/606724277198258207/867ff4bd6cfc9e27df6aad617e4a514c.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ｃｙｂｅｒｃａｍａｒａｄａナば）#1025" data-user-id="606724277198258207">ｃｙｂｅｒｃａｍａｒａｄａナば）</span>
+                <span class="chatlog__timestamp">03-Aug-19 05:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O que acham de veicular as midias populares? Voz Oper&#225;ria,  A verdade etc...?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">03-Aug-19 06:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Acho interessante, mas acabo n&#227;o lendo, pq &#233; t&#227;o mais f&#225;cil acompanhar pelas redes sociais</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/606724277198258207/867ff4bd6cfc9e27df6aad617e4a514c.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="ｃｙｂｅｒｃａｍａｒａｄａナば）#1025" data-user-id="606724277198258207">ｃｙｂｅｒｃａｍａｒａｄａナば）</span>
+                <span class="chatlog__timestamp">03-Aug-19 11:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Deixei a ideia no ar de qlqr jeito</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">04-Aug-19 03:39 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Nossos projetos atuais:</strong>
+
+<em>Projetos colaborativos:</em>
+
+<a href="http://facebook.com/memesbaixadoslegalmente">http://facebook.com/memesbaixadoslegalmente</a> - Nossa p&#225;gina de memes, conhecida tamb&#233;m como MBL ou MBLgl (pra diferenciar do Movimento Brasil Livre). A ideia original era de ser clickbait da MBL (ideia que n&#227;o mudou), e postar memes que inclinem isent&#245;es &#224; esquerda. Ainda fazemos isso, mas a ideia se expandiu: postamos vers&#245;es do Stoshi (o nosso meme original) e roubamos imagens de p&#225;ginas de direita para modific&#225;-las e vandaliz&#225;-las, esquerdizando-as.
+
+<strong>Stoshi</strong>: Stolen Yoshi, o nosso meme-s&#237;mbolo. Ele &#233; um Yoshi roubado, com uma express&#227;o smug de &quot;sei muito bem o que t&#225; acontecendo&quot;, e virado sempre pra esquerda. Ele representa uma esquerda esperta e irreverente. Seu uso &#233; igual ao do Pepe: fazemos vers&#245;es dele com v&#225;rias roupas (representando v&#225;rias figuras comunistas ou neutras), usamos em memes, tirinhas e macros.
+
+<strong>Dark Wojak Comunista</strong>: Dark Wojak &#233; um meme de 2017 da /leftypol/, que acabou morrendo. &#201; uma vers&#227;o sinistra e distorcida do Wojak. Inspirados neste post (<a href="https://8ch.net/leftypol/res/2264095.html#q2908540)">https://8ch.net/leftypol/res/2264095.html#q2908540)</a>, resgatamos o meme e radicalizamos ele ainda mais, colocando uma foice-e-martelo em sua testa e associando-o direta e descaradamente ao comunismo. Ele representa um comunismo viral, violento e desrespeitoso, que est&#225; em todos os lugares e que deve ser temido pela elite.
+
+<strong>Cybercomunismo</strong>: Ideia deste post da /expropriado/: <a href="https://8ch.net/expropriado/res/736.html#q736">https://8ch.net/expropriado/res/736.html#q736</a> . A ideia &#233; criar um movimento art&#237;stico-te&#243;rico que enfatize um comunismo voltado para o futuro (sem renegar o passado), no lugar de um comunismo preso na nostalgia, no saudosismo e no fatalismo. Queremos resgatar uma esperan&#231;a no futuro. Estamos fazendo artes que misturam construtivismo e abstracionismo das vanguardas do s&#233;culo XX com o vaporwave e o cyberpunk contempor&#226;neos.</span>
+
+                                <span class="chatlog__edited-timestamp" title="04-Aug-19 03:42 PM">(edited)</span>
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="http://facebook.com/memesbaixadoslegalmente"><span class="markdown">MBL - Memes Baixados Legalmente</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">MBL - Memes Baixados Legalmente. 326 likes &#183; 690 talking about this. Memes baixados legalmente.</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/c0.0.200.200a/p200x200/65581524_2566089576774701_4196533113796427776_n.png?_nc_cat=100&_nc_oc=AQl5eitM9wRImBHbhuKecTqK8tYReZtE2X71VBhk0ICdoYYi4IpnPXfGfXzhuPRDWP8&_nc_ht=scontent-iad3-1.xx&oh=eeefa878018480260524c6ed73007fe2&oe=5DEAB646">
+                                                <img class="chatlog__embed-thumbnail" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/c0.0.200.200a/p200x200/65581524_2566089576774701_4196533113796427776_n.png?_nc_cat=100&_nc_oc=AQl5eitM9wRImBHbhuKecTqK8tYReZtE2X71VBhk0ICdoYYi4IpnPXfGfXzhuPRDWP8&_nc_ht=scontent-iad3-1.xx&oh=eeefa878018480260524c6ed73007fe2&oe=5DEAB646" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://8ch.net/leftypol/res/2264095.html"><span class="markdown">OC Thread 3.0</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">==OC Thread 3.0==I suppose we should establish a new thread dedicated to /leftypol/ original content.Feel free to post original content you&#39;ve made, or OC someone else recently made which you would like to share.Or, collaborate on improving content within this thread.</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://media.8ch.net/file_store/thumb/480dbb0f6d174fd55b145d4f79daea11e67374895990827c4026bb6afdcdf530.png">
+                                                <img class="chatlog__embed-thumbnail" src="https://media.8ch.net/file_store/thumb/480dbb0f6d174fd55b145d4f79daea11e67374895990827c4026bb6afdcdf530.png" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://8ch.net/expropriado/res/736.html"><span class="markdown">Cybercomunismo</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Eu acho que devemos come&#231;ar a mudar drasticamente nossa est&#233;tica e nossa vis&#227;o no imagin&#225;rio popular. Creio que estamos ainda muito apegados a est&#233;tica do s&#233;culo passado, temos que come&#231;ar a popularizar uma vis&#227;o mais &quot;futurista&quot; e atual do comunismo, e achar uma form...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://media.8ch.net/file_store/thumb/1b18191f29bd1177e3640f41d951093388123fe3f1b4a04aa15de697ce574a72.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://media.8ch.net/file_store/thumb/1b18191f29bd1177e3640f41d951093388123fe3f1b4a04aa15de697ce574a72.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Projetos individuais</em>:
+
+<a href="http://facebook.com/DOCTRINATIONWAVE">http://facebook.com/DOCTRINATIONWAVE</a> - P&#225;gina de vaporwave comunista do <span class="mention" title="Triebe, Ding, Unbewusste#1749">@Triebe, Ding, Unbewusste</span> . Ela aceita tamb&#233;m contribui&#231;&#245;es de gente de fora, incluindo do servidor. Serve de porta-voz estilo &quot;hegemonia cultural&quot; da /expropriado/ e da MBLgl.
+
+P&#244;sters construtivistas russos com personagens de anime - Exatamente como o nome diz. Projeto individual do <span class="mention" title="Triebe, Ding, Unbewusste#1749">@Triebe, Ding, Unbewusste</span> , mas pode se tornar colaborativo se algu&#233;m mais quiser ajudar. Estou pegando p&#244;sters dessa fase da arte sovi&#233;tica e editando para colocar personagens de anime e mang&#225; neles.</span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="http://facebook.com/DOCTRINATIONWAVE"><span class="markdown">Ｄｏｃｔｒｉｎａｔｉｏｎｗａｖｅ</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Ｄｏｃｔｒｉｎａｔｉｏｎｗａｖｅ. 2,399 likes &#183; 397 talking about this. Expropriando a Ａｅｓｔｅｔｉｃａ em prol da constru&#231;&#227;o do comunismo e liberta&#231;&#227;o da humanidade.
+
+~ Ｏｌａｖｏ ｎｏｓ ｏｄｅｉａ~
+
+[Continua&#231;&#227;o espiritual do p...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/p200x200/67439982_922519201433036_4562524761900449792_n.png?_nc_cat=100&_nc_oc=AQkCMozJOak-Dx1d-L86Yl_bdDgAXB2nyOXtZ8eYXCPyyhfIuej-0i_PPfprv0ijCaE&_nc_ht=scontent-atl3-1.xx&oh=85e7828c0440130f511f9c57db489dbf&oe=5DD12124">
+                                                <img class="chatlog__embed-thumbnail" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/p200x200/67439982_922519201433036_4562524761900449792_n.png?_nc_cat=100&_nc_oc=AQkCMozJOak-Dx1d-L86Yl_bdDgAXB2nyOXtZ8eYXCPyyhfIuej-0i_PPfprv0ijCaE&_nc_ht=scontent-atl3-1.xx&oh=85e7828c0440130f511f9c57db489dbf&oe=5DD12124" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Stoshi:</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/607645314253586432/d71f47db1e53649c48aa015f3e83b4d23947df232b4ebb197be015abb1bf5eca.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/607645314253586432/d71f47db1e53649c48aa015f3e83b4d23947df232b4ebb197be015abb1bf5eca.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/607645372361474078/6fce11dc85dc0ada400e904c4190b2e2ab76bd5de6a144ea5e1d630b2cb598b7.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/607645372361474078/6fce11dc85dc0ada400e904c4190b2e2ab76bd5de6a144ea5e1d630b2cb598b7.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Dark Wojak Comunista:</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/607645514049126433/DWC4.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/607645514049126433/DWC4.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/607645655401234453/DWC3.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/607645655401234453/DWC3.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">04-Aug-19 03:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Nossos projetos futuros:</strong>
+
+- P&#244;sters e panfletagem /expropriado/: Faremos p&#244;sters e panfletos prontos para serem impressos, tanto divulgando comunismo em si como a /expropriado/ e p&#225;ginas nossas. Nos inspiraremos numa galera da alt-right brasileira que fez isso com o Honkler e ajudou a espalh&#225;-lo. N&#227;o &#233; obrigado que fa&#231;amos muita panfletagem: o importante &#233; tornar os PDFs p&#250;blicos para que pessoas de diversos grupos comunas possam colar p&#244;sters e distribuir panfletos por a&#237;.
+
+- Podcast da /expropriado/: O que o nome diz. O primeiro tema que pretendemos trabalhar no futuro &#233; o de propaganda comunista virtual e mem&#233;tica. Seria atrelado ao nosso grupo de estudo.
+
+- Grupo de estudo conjunto: /expropriado/ + Comunismo para Desencantados: O que o nome diz. A CpD &#233; uma p&#225;gina parceira nossa no Facebook. Procurar&#237;amos tanto estudar cl&#225;ssicos e material iniciante (para atrair mais pessoas ao comunismo) como obras contempor&#226;neas e &quot;capitalismo do s&#233;culo XXI&quot; n&#227;o-revisionista.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention">@everyone</span> Todos os projetos da /expropriado/ e de seus membros, incluindo projetos futuros.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">05-Aug-19 08:40 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Muito bom</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">05-Aug-19 09:22 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention">@everyone</span> Por favor, leiam as mensagens fixadas neste canal! Temos projetos que est&#227;o abertos para a participa&#231;&#227;o de todos do server que queiram ajudar!</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/185492313760464897/82446e539df98636b314c1d42b502a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧#6238" data-user-id="185492313760464897">⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧</span>
+                <span class="chatlog__timestamp">05-Aug-19 09:58 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">hmm, eu n&#227;o sei se &#233; o lugar certo aqui pra discutir propagandismo, mas eu tinha um ponto que eu gostaria de levantar, mandar ideia, sei l&#225;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">05-Aug-19 09:59 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">manda no nomenklatura</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/185492313760464897/82446e539df98636b314c1d42b502a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧#6238" data-user-id="185492313760464897">⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">hmm, veleza</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:21 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧#6238">@⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧</span> Fala aqui mesmo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">j&#225; que o nomenklatura t&#225; meio cheio</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">OI MEU NOME &#201; TRIEBE</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">VAI PRO NOMENKLATURA</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">epa calma po</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">VAI PRO &#196;STHETIK</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/172002275412279296/f5f65755f67ae1dc88d9bb271d0f5bef.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Tatsumaki#8792" data-user-id="172002275412279296">Tatsumaki</span>
+                    <span class="chatlog__bot-tag">BOT</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji " alt="🆙" title="🆙" src="https://twemoji.maxcdn.com/2/72x72/1f199.png" />  |  <strong>[A] Gulag Felps leveled up!</strong></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/608108172854689844/levelUp.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/608108172854689844/levelUp.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">VAI PRO KOOPER&#193;CIJA</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">VAI DA CU</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:25 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">brabo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/412146317406502912/f49961b97784d5c61ada3baf4e5c0487.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Dada ill#0591" data-user-id="412146317406502912">Dada ill</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:25 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu perdi muito nesse &#250;ltimo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:26 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkkkkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:26 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#233; quest&#227;o de organiza&#231;&#227;o <span class="mention" title="[A] Gulag Felps#7527">@[A] Gulag Felps</span> acalmasse</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">t&#244; zuando p&#244;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">J&#225; repreendeu um cara em outro canal</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Agora vem em mim</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">kkkk</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">boy oh boy</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/412146317406502912/f49961b97784d5c61ada3baf4e5c0487.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Dada ill#0591" data-user-id="412146317406502912">Dada ill</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Achei que era o senhor que tinha Gulag no nome. Fazemos apenas o melhor para lhe fazer sentir-se em casa.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310073607462322179/330bfc3efecdd11f8d951ab8bc6f6e9a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="[A] Gulag Felps#7527" data-user-id="310073607462322179">[A] Gulag Felps</span>
+                <span class="chatlog__timestamp">05-Aug-19 10:29 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Comofas pra ficar amarelinha a mijada?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="Dada ill#0591">@Dada ill</span> u&#233; u&#233;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 05:19 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention">@everyone</span> Voc&#234;s tem projetos, como p&#225;ginas do Facebook, contas do Soundcloud, iniciativas, etc. etc. que queiram compartilhar com a galera?
+
+Anunciem aqui!</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tenho uma p&#225;gina no Facebook onde posto frases de pensadores e revolucion&#225;rios com fotos estilo retro... 
+<a href="https://m.facebook.com/SocialNacionalismo/">https://m.facebook.com/SocialNacionalismo/</a></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">De vez em quando posto alguns artigos meus l&#225; tamb&#233;m.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376517124337958912/b6a534a5b5470af391593c29f40d1d7f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="☭ B&#225;rbara A. M. ☭#3949" data-user-id="376517124337958912">☭ B&#225;rbara A. M. ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">isso n&#227;o &#233; tipo nazismo?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Nacional Socialismo = NS = Nazismo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ps&#233;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Que que &#233; isso camarada?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o... &#201; nacionalismo terceiro mundista</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Nazbol aqui?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o sou nazbol</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376517124337958912/b6a534a5b5470af391593c29f40d1d7f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="☭ B&#225;rbara A. M. ☭#3949" data-user-id="376517124337958912">☭ B&#225;rbara A. M. ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">AH SIM</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">perdoa a burra</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">vou ver tua pag</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:44 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Posto apenas coisas relacionadas &#224; cr&#237;tica profunda ao atual governo, a situa&#231;&#227;o pol&#237;tica do pa&#237;s, nacionalismo de esquerda, terceiromundismo, etc...</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Socialismo, comunismo...</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376517124337958912/b6a534a5b5470af391593c29f40d1d7f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="☭ B&#225;rbara A. M. ☭#3949" data-user-id="376517124337958912">☭ B&#225;rbara A. M. ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:45 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Gostei muito, at&#233; salvei nos favoritos aqui</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah que bom que gostou!</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376517124337958912/b6a534a5b5470af391593c29f40d1d7f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="☭ B&#225;rbara A. M. ☭#3949" data-user-id="376517124337958912">☭ B&#225;rbara A. M. ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tu citou o Jango numa frase!</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Imposs&#237;vel eu n&#227;o ter gostado</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Estou aceitando recomenda&#231;&#245;es de frases de pensadores socialistas e tamb&#233;m pequenos textos de autoria pr&#243;pria</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/198225577344237568/1d5f6dd479f6a2c6b34e12a72d6ac1ce.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Zorak#1779" data-user-id="198225577344237568">Zorak</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O nome &#233; muito estranho,mas nacionalismo pode e deve ser usado na luta anti imperialista</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Relaxa galera, &#233; aquele estilo de socialismo bem latinoamericano</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/198225577344237568/1d5f6dd479f6a2c6b34e12a72d6ac1ce.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Zorak#1779" data-user-id="198225577344237568">Zorak</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">o problema &#233; se o nacionalismo ficar maior que o socialismo. A&#237; que entra o problema</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">pelo que t&#244; vendo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376517124337958912/b6a534a5b5470af391593c29f40d1d7f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="☭ B&#225;rbara A. M. ☭#3949" data-user-id="376517124337958912">☭ B&#225;rbara A. M. ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ai vira alemanha nazista</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">gostei das imgs</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">cita&#231;&#245;es s&#227;o mto &#250;teis ali&#225;s fuhwqefwe</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:52 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Acredito que o socialismo revolucion&#225;rio em si mesmo &#233; a maior manifesta&#231;&#227;o de nacionalismo. A partir do momento em que se impede que um camarada seja explorado por um burgu&#234;s, certamente n&#227;o se deixar&#225; que uma na&#231;&#227;o estrangeira explore nossa terra e nosso povo.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/376517124337958912/b6a534a5b5470af391593c29f40d1d7f.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="☭ B&#225;rbara A. M. ☭#3949" data-user-id="376517124337958912">☭ B&#225;rbara A. M. ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Gostei. Pode virar frase.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 07:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">J&#225; virou kkkk</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vou postar por esses dias</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o gosto muito de postar frases pr&#243;prias</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Se n&#227;o a p&#225;g perde o prop&#243;sito</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Parece uma p&#225;gina que usa frases de nacionalistas burgueses para dar um tom revolucion&#225;rio; Nasser, Gadaffi, Brizola, Chavez, Goulart, etc
+
+Me faz lembrar ao flame of liberation.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="Madame Veto#1166">@Madame Veto</span>, costumo postar de tudo um pouco. Inegavelmente n&#227;o concordo com tudo que existe de nacionalismo no terceiro mundo. Mas n&#227;o posso desconsiderar que esses l&#237;deres como Nasser, Gaddafi, Brizola, Chaves, Goulart, etc, foram resist&#234;ncias contra o imperialismo em seus pa&#237;ses.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">De fato s&#227;o burgu&#234;ses, revisionistas, etc...</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Entretanto o foco geral da p&#225;g &#233; o socialismo e o comunismo revolucion&#225;rio.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/185492313760464897/82446e539df98636b314c1d42b502a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧#6238" data-user-id="185492313760464897">⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eu acho entretanto que essa esp&#233;cie de &quot;propaganda&quot; que desperte primeiro o sentimento anti-imperialista &#233; muito importante tamb&#233;m pra pauta revolucion&#225;ria mesmo
+como voc&#234; mesmo colocou aqui e na p&#225;gina, muita gente nem tem ideia de nada do capitalismo, querer despertar direto uma consci&#234;ncia de classes nessa parte do povo &#233; (quase) surreal
+fico pensando se uma esp&#233;cie de nacional-socialismo reverso n&#227;o seria uma excelente ferramenta
+tipo, Hitler usava e distorcia a ret&#243;rica socialista pros seus pr&#243;prios prop&#243;sitos de disseminar o sentimento de antissemitismo
+talvez algo que fa&#231;a algo semelhante com um nacionalismo &#224; esquerda em que o socialismo n&#227;o seja s&#243; fachada poderia ser uma boa ideia
+posso estar pecando tamb&#233;m em sugerir qualquer coisa do g&#234;nero</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&#201; bom inclusive pra cooptar gente que talvez virasse nazbol</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ou reacion&#225;ria trabalhista ou fascista mesmo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Esse tipo de propaganda faz as pessoas virar nazbol.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Entendo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/185492313760464897/82446e539df98636b314c1d42b502a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧#6238" data-user-id="185492313760464897">⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">justo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:55 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">literalmente tem ao vargas, ao peron, nasser e ao saddam, os cuatros ca&#231;aram comunistas e defendiam um &quot;socialismo nacional&quot;</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/608478235398897682/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/608478235398897682/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Socialismo nacional &#233; um sinonimo para um estado de bienestar autoritario.</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Aug-19 10:56 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu n&#227;o estou acusando ao companhero, apenas comentando.</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Aug-19 10:57 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">De boas</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Acho que ele entendeu como coment&#225;rio tbm</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">06-Aug-19 10:58 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ja ouviou falar do &quot;socialismo n&#227;o-marxista&quot;?</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Aug-19 10:58 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">06-Aug-19 11:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Acho que embora tenha sido um coment&#225;rio, ouve um mal entendido. O nome da p&#225;g, na verdade, &#233; &quot;Socialismo &amp; Nacionalismo (...)&quot;. 
+Penso em um socialismo nacional (sem suprimir o internacionalismo prolet&#225;rio, que &#233; muito importante e faz muita falta hoje em dia) e j&#225; at&#233; escrevi sobre isso no passado. Mas n&#227;o &#233;, de forma alguma, um &quot;nacional-socialismo reverso&quot;. Seria irracionalismo pol&#237;tico e intelectual da minha parte falar de Hitler e falar de um judeu como Marx (que &#233; a minha maior influ&#234;ncia no plano socialista mundial). 
+
+Quanto a Vargas, Per&#243;n, Nasser e Saddam, como eu disse, foram resist&#234;ncias contra o imperialismo no seu tempo. Vargas, por exemplo, embora tenha errado (muito), foi muito importante para o desenvolvimento industrial no Brasil, tornou poss&#237;vel diversos direitos trabalhistas para a classe trabalhadora.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sou um socialista s&#233;rio e tenho lutado muito por esse ideal, claro, fazendo as cr&#237;ticas e as considera&#231;&#245;es necess&#225;rias &#224; atualidade e ao passado do movimento.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:26 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">N&#227;o te chame de nacional-socialista, simplesmente que as pessoas apresentadas s&#227;o tamb&#233;m os &#237;dolos dos socialistas nacionais. Quanto aos 4 personagens nomeados:
+
+&quot;Ele olha para essas categorias como os olhares pequeno-burgueses sobre os grandes homens da hist&#243;ria: Napole&#227;o era um grande homem; ele fez muito bem; ele tamb&#233;m causou muito dano&quot;
+
+Sim, vargas ajudou na industrializa&#231;&#227;o, e dai? Por que merece ser representado nos c&#237;rculos da esquerda? Isso &#233; simplesmente um abandono do programa revolucion&#225;rio e um flerte com as abordagens trabalistas de &quot;dar mais direitos, a luta de classes &#233; ruim, precisamos de colabora&#231;&#227;o de classes&quot;.
+
+Voc&#234; sabe qual &#233; o principal problema? Que ao fazer isso, voc&#234; estar&#225;, mesmo que n&#227;o queira, integrando o discurso nacionalista de nacionalismo vs globalismo; apoiar a burguesia nacional contra a burguesia estrangeira; defender a industria nacional; acreditar que a na&#231;&#227;o &#233; o principal e n&#227;o classe e ate o tipico a &quot;homossexualidade &#233; a decad&#234;ncia burguesa importada pelo imperialismo capitalista&quot; Tudo isso &#233; uma maneira de subordinar o comunismo ao nacionalismo burgues ja que faz ao desavisado achar que o socialismo &#233; sobre isso. Adicione a isso que a palavra socialista j&#225; est&#225; muito prostitu&#237;da:
+
+- Ba&#39;thistas falam do &quot;socialismo arabe&quot;
+- Os brizolistas falam de um &quot;socialismo moreno&quot;
+- Os castilhistas falam de um &quot;socialismo patri&#243;tico&quot;
+- O PDT, que &#233; a porcaria que nasce da sujeira que &#233; o trabalhismo, est&#225; dentro da &quot;internacional socialista&quot;, outro &#243;rg&#227;o da contra-revolu&#231;&#227;o.
+
+Voc&#234; n&#227;o acha que &#233; um erro colocar figuras do nacionalismo burgu&#234;s com figuras socialistas? Voc&#234; n&#227;o acha que isso causa ainda mais confus&#227;o? No final, s&#243; teremos aberra&#231;&#245;es com um discurso que diz que devemos apoiar at&#233; mesmo o Taliban porque eles s&#227;o nacionalistas e antiimperialistas.</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Aug-19 12:32 AM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji emoji--large" alt="🤷" title="🤷" src="https://twemoji.maxcdn.com/2/72x72/1f937.png" /></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/603755384188174348/608501275755282443/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/603755384188174348/608501275755282443/unknown.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:35 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">O pr&#243;prio Marx foi o primeiro a criticar as teses homossexuais, minha cara. Stalin tamb&#233;m criticou diversas vezes. 
+Os socialistas foram os primeiros a abandonar o plano revolucion&#225;rio, n&#227;o temos nenhum movimento revolucion&#225;rio masivo atualmente. Sou realista, prefiro um governo que d&#234; boas condi&#231;&#245;es de vida aos trabalhadores do que um governo neo-liberal como o atual que est&#225; fodendo o trabalhador.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🤡" title="🤡" src="https://twemoji.maxcdn.com/2/72x72/1f921.png" />
+                                    <span class="chatlog__reaction-count">1</span>
+                                </div>
+                        </div>
+                        <div class="chatlog__content">
+                            <span class="markdown">Voc&#234; pode achar que a degrada&#231;&#227;o e a precariza&#231;&#227;o do trabalho vai ajudar a maximizar a luta de classes, mas e da&#237;? Quem hoje tem consci&#234;ncia de classes? 
+O governo vai foder o povo e na pr&#243;xima elei&#231;&#227;o a esquerda burguesa vence de novo.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:40 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">asdasdafjdasd</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Literalmente nacionalista pequeno burgu&#234;s com um tom vermelho.
+
+Era hora de voc&#234; mostrar sua verdadeira face.
+Marx tamb&#233;m era anti-semita, temos que ser? Isso tem a ver com a an&#225;lise materialista de Marx ou com suas opini&#245;es pessoais?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Marx era judeu</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ele era fortemente anti-semita.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/185492313760464897/82446e539df98636b314c1d42b502a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧#6238" data-user-id="185492313760464897">⚧B̷r̷u̶x̷i̴n̷h̷a̶ ̷A̶n̵t̷i̶f̸a̸⚧</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="Camarada Ara&#250;jo ☭#8864">@Camarada Ara&#250;jo ☭</span> n&#227;o sugeri nada desse g&#234;nero tamb&#233;m, calma, acho que me expliquei muito mal tbm</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Bom, eu sou marxista</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <img class="emoji emoji--small" alt="🤡" title="🤡" src="https://twemoji.maxcdn.com/2/72x72/1f921.png" />
+                                    <span class="chatlog__reaction-count">1</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention">@Mod</span> Parece que estamos en un circo, vamos a permitir este tipo de actidudes aca?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Se os moderadores quiserem eu mesmo posso me retirar.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Deixa eu entender</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:44 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ia ficar fora mas pelo visto</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:44 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="Camarada Ara&#250;jo ☭#8864">@Camarada Ara&#250;jo ☭</span> vc &#233; nacionalista?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ja f&#243;i dito tudo.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586339305807675404/6091ee097d73a1a8a11a991ed0ee8ec9.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Krinkov#1323" data-user-id="586339305807675404">Krinkov</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&gt;St&#225;lin e Marx criticavam a homossexualidade
+&gt;Marx e St&#225;lin viveram no s&#233;culo XIX e XX, &#233;pocas em que o estudo sobre o assunto n&#227;o era avan&#231;ado</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E essas eram opinoes pessoias</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">nada tem haver com o analise da realidade material do marxismo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">camarada Krinkov est&#225; certo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ara&#250;jo, voc&#234; quis dizer que &quot;infelizmente isso era algo comum dessas figuras&quot;, ou foi uma defesa desse pensamento?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586339305807675404/6091ee097d73a1a8a11a991ed0ee8ec9.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Krinkov#1323" data-user-id="586339305807675404">Krinkov</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:46 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">E olha que no pa&#237;s mais avan&#231;ado nesse estudo, a Alemanha, o KPD tratava a homossexualidade de forma bem progressiva</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:46 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mandame Veto, vem me acusando injustamente de nacional-socialista, n&#227;o-bol, pequeno-burgues, desde o come&#231;o desse debate. 
+Estou disposto a debater todo tipo de assunto, mas n&#227;o tolero acusa&#231;&#245;es dessa marca.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586339305807675404/6091ee097d73a1a8a11a991ed0ee8ec9.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Krinkov#1323" data-user-id="586339305807675404">Krinkov</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:46 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Adendo que o KPD era &quot;estalinista&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:46 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ara&#250;jo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">me diga</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263223498728669184/09d90ee772ad25b88e40e08d73466a6a.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Madame Veto#1166" data-user-id="263223498728669184">Madame Veto</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mas voc&#234; provou isso pelos seus pr&#243;prios coment&#225;rios.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Eu</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ei</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Vamos mover isso pra outro canal</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">aqui n&#227;o</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/243061504994181120/a1397f022adeaba9727af83ffe9af176.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="JPEGboy#1523" data-user-id="243061504994181120">JPEGboy</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:48 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ok</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:48 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">pra n&#227;o encher um canal que &#233; pra outro prop&#243;sito</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ara&#250;jo</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">escreva sua resposta no canal nomenklatura</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">n mande aqui</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ok?</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/508697804386861069/c8f1411de15ca92544a15bef64600d94.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Camarada Ara&#250;jo ☭#8864" data-user-id="508697804386861069">Camarada Ara&#250;jo ☭</span>
+                <span class="chatlog__timestamp">07-Aug-19 12:48 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Meu maior compromisso &#233; com o materialismo dial&#233;tico e com a classe trabalhadora, e tem sido assim h&#225; 5 anos. Mas se estiverem dispostos a me censurar por trivialidades, fiquem a vontade.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/310876730506084363/9d1cc193782895bd7773b7365e494b66.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Lox#1819" data-user-id="310876730506084363">Lox</span>
+                <span class="chatlog__timestamp">07-Aug-19 10:48 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">@Camarada Ara&#250;jo <img class="emoji " alt="☭" title="☭" src="https://twemoji.maxcdn.com/2/72x72/262d.png" />#8864 Poderia citar exatamente o que Marx falava sobre homossexuais?</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Ah, o CHUD saiu.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

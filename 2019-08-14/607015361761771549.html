@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>/expropriado/ &amp; /bantifa/ - ideologias-pol&#237;ticas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #ffffff;
+    color: #747f8d;
+}
+
+a {
+    color: #00b0f4;
+}
+
+.spoiler {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pre {
+    background-color: #f9f9f9 !important;
+}
+
+.pre--multiline {
+    border-color: #f3f3f3 !important;
+    color: #657b83 !important;
+}
+
+.mention {
+    background-color: #f1f3fb;
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #2f3136;
+}
+
+.info__channel-name {
+    color: #2f3136;
+}
+
+.info__channel-topic {
+    color: #2f3136;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: #eceeef;
+}
+
+.chatlog__author-name {
+    color: #2f3136;
+}
+
+.chatlog__timestamp {
+    color: #99aab5;
+}
+
+.chatlog__edited-timestamp {
+    color: #99aab5;
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(249, 249, 249, 0.3);
+    border-color: rgba(204, 204, 204, 0.3);
+}
+
+.chatlog__embed-author-name {
+    color: #4f545c;
+}
+
+.chatlog__embed-author-name-link {
+    color: #4f545c;
+}
+
+.chatlog__embed-title {
+    color: #4f545c;
+}
+
+.chatlog__embed-description {
+    color: #737f8d;
+}
+
+.chatlog__embed-field-name {
+    color: #36393e;
+}
+
+.chatlog__embed-field-value {
+    color: #737f8d;
+}
+
+.chatlog__embed-footer {
+    color: rgba(79, 83, 91, 0.4);
+}
+
+.chatlog__reaction {
+    background-color: rgba(79, 84, 92, 0.06);
+}
+
+.chatlog__reaction-count {
+    color: #99aab5;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/567170846033182740/6db03210048affaee5a2ee0a09b68278.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">/expropriado/ &amp; /bantifa/</div>
+        <div class="info__channel-name">ideologias-pol&#237;ticas</div>
+        
+
+        <div class="info__channel-message-count">82 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/241636481184038912/faf389dc6acd0ab47243a0c0b484bc45.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Triebe, Ding, Unbewusste#1749" data-user-id="241636481184038912">Triebe, Ding, Unbewusste</span>
+                <span class="chatlog__timestamp">02-Aug-19 10:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607015704335482880/c472d4523ec5d4baadfc2eed75f159de9d485b2331613d51e05748585ebd2e2a.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607015704335482880/c472d4523ec5d4baadfc2eed75f159de9d485b2331613d51e05748585ebd2e2a.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Qual &#233; a sua ideologia, prole?</strong></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">No server, as bandeiras representam ideologias pol&#237;ticas. Neste canal, voc&#234; encontrar&#225; legendas das bandeiras e descri&#231;&#245;es curtas de cada ideologia.
+.
+.
+.</span>
+
+                                <span class="chatlog__edited-timestamp" title="02-Aug-19 10:06 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Marxismo</strong>
+
+A doutrina pol&#237;tica fundada por Karl Marx e Friedrich Engels. A cr&#237;tica cient&#237;fica do capital e do capitalismo, a afirma&#231;&#227;o da insufici&#234;ncia de qualquer modelo n&#227;o-comunista em libertar a humanidade, a defesa da destrui&#231;&#227;o da propriedade privada dos meios de produ&#231;&#227;o e da aboli&#231;&#227;o de sistemas econ&#244;micos capitalistas/pr&#233;-capitalistas, o “&#250;ltimo uso do Estado”, dentre outras elementos, s&#227;o tra&#231;os que especificam o marxismo em rela&#231;&#227;o a outras vertentes comunistas e socialistas.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607016363516755978/9b3ae8b217563176cbb4a124eea30a212bb5b0871d68fc50d17bb2d799f36f60.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607016363516755978/9b3ae8b217563176cbb4a124eea30a212bb5b0871d68fc50d17bb2d799f36f60.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Marxismo-Leninismo</strong>
+
+Vertente do marxismo cuja base reside no trabalho te&#243;rico e pol&#237;tico de Vladimir Lenin. Dentre seus preceitos centrais e mais caracter&#237;sticos, e que lhe tornam diferente de algumas outras vertentes marxistas, podemos elencar o vanguardismo partid&#225;rio e o centralismo democr&#225;tico, al&#233;m de certos elementos de sua concep&#231;&#227;o de socialismo que diferem da interpreta&#231;&#227;o de outras vertentes. Joseph Stalin posteriormente sintetizou e fez suas pr&#243;prias contribui&#231;&#245;es e modifica&#231;&#245;es das teorias leninistas.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607016612628922389/4750ece94aeb75d72fba134fcf40fab0dff3ac4f1b4792cf883ea2566f963c51.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607016612628922389/4750ece94aeb75d72fba134fcf40fab0dff3ac4f1b4792cf883ea2566f963c51.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Trotskyismo</strong>
+
+Vertente do marxismo cuja base reside no trabalho te&#243;rico e pol&#237;tico de Leon Trotsky. O trotskyismo possui similaridades com o leninismo, como a defesa do vanguardismo partid&#225;rio. As diferen&#231;as com o marxismo-leninismo se d&#227;o, especialmente, no que diz respeito &#224; teoria da revolu&#231;&#227;o permanente de Trotsky, e a cr&#237;tica deste &#250;ltimo &#224; burocracia no governo de Stalin.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607016699505410058/650c843614e472c6748d5cfa866b3b61a99ea78485c0fe5d7d97a1276455adaf.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607016699505410058/650c843614e472c6748d5cfa866b3b61a99ea78485c0fe5d7d97a1276455adaf.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maoismo</strong>
+
+O maoismo, tamb&#233;m conhecido como marxismo-leninismo-maoismo, &#233; a vertente marxista fundada por M&#225;o Z&#233;dōng. &#201; derivada do marxismo-leninismo, mas possui diversas peculiaridades: frente &#224; sociedade agr&#225;ria e pr&#233;-industrial que era a China de seu tempo, Mao atribuiu ao campesinato o pr&#243;prio papel de classe revolucion&#225;ria (no lugar do proletariado urbano do marxismo tradicional). Dentro do maoismo tamb&#233;m est&#225; contida a perspectiva de Mao quanto ao conceito de contradi&#231;&#227;o, e sua teoria dos Tr&#234;s Mundos. O Partido dos Panteras Negras e o Guevarismo foram ambos influenciados pelo maoismo.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607016958465933342/3c0975fe2e1dba7007dfef9f15efde74cd9278000a523277ef25ee065c676908.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607016958465933342/3c0975fe2e1dba7007dfef9f15efde74cd9278000a523277ef25ee065c676908.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Hoxhaismo</strong>
+
+Subvertente do marxismo-leninismo que deriva de Enver Hoxha, secret&#225;rio-geral da Alb&#226;nia comunista de 1944 at&#233; sua morte em 1985. Defendia uma postura anti-revisionista em rela&#231;&#227;o ao leninismo, especialmente protegendo o legado de Stalin. Tamb&#233;m defendia que cada pa&#237;s buscasse o socialismo da maneira que fosse mais adequada &#224; realidade de cada lugar.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607017034076782614/8fb63472eb233f332fd5f9db6352fe38dd5e088c197d792e9d761ac211832025.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607017034076782614/8fb63472eb233f332fd5f9db6352fe38dd5e088c197d792e9d761ac211832025.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Juche</strong>
+
+A ideologia Juche &#233; uma vertente norte-coreana do marxismo-leninismo, que se prop&#245;e a adaptar e modificar seus preceitos de modo coerente com a realidade norte-coreana. O foco do juche &#233; na auto-sufici&#234;ncia, tanto individual como coletiva dos coreanos, como a maneira pela qual eles poder&#227;o construir seu pr&#243;prio socialismo.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607017164851118081/2ed722799227027696ec1c416700d572a61cb123f65a4d9ed3cc5d13a1b961d2.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607017164851118081/2ed722799227027696ec1c416700d572a61cb123f65a4d9ed3cc5d13a1b961d2.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Chavismo</strong>
+
+Ideologia pol&#237;tica socialista gestada por Hugo Ch&#225;vez, presidente da Venezuela de 1999 at&#233; sua morte, em 2014. Tem dentre seus tra&#231;os o panamericanismo, o anti-imperialismo e a soberania da Am&#233;rica Latina, a defesa da democracia participativa, e a tentativa de criar uma na&#231;&#227;o economicamente auto-suficiente.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607017302877274133/c58c9ab31e1ed1726cf072be193c99de655148da3013f6edb7ec2e0bcdc42f84.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607017302877274133/c58c9ab31e1ed1726cf072be193c99de655148da3013f6edb7ec2e0bcdc42f84.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Guevarismo</strong>
+
+Vertente do marxismo-leninismo pautada na atua&#231;&#227;o militar, pol&#237;tica e te&#243;rica de Che Guevara. Dentre suas particularidades, est&#225; a defesa de uma estrat&#233;gia de guerrilha, o focalismo (vanguardismo por pequenos grupos armados, muitas vezes dissociados de partidos comunistas j&#225; estabelecidos, que empreendem opera&#231;&#245;es na zona rural e gradualmente avan&#231;am para as cidades). O guevarismo sofreu significativa influ&#234;ncia do maoismo.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607017410855174147/a70ad634ad7ad3c156642fe98e88b353cae81d0cd7f4e3ef11ea205ac002ee60.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607017410855174147/a70ad634ad7ad3c156642fe98e88b353cae81d0cd7f4e3ef11ea205ac002ee60.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Esquerdo-comunismo</strong>
+
+Um conjunto heterog&#234;neo de correntes marxistas que possuem, como caracter&#237;stica comum, uma oposi&#231;&#227;o simult&#226;nea ao marxismo-leninismo, &#224; social-democracia e ao trotskyismo. Suas tr&#234;s correntes mais famosas s&#227;o o bordiguismo (derivado do trabalho de Amadeo Bordiga), o comunismo de conselhos (defendido por figuras como Anton Pannekoek, Otto R&#252;hle e Paul Mattick) e o situacionismo (cuja figura mais famosa &#233; Guy Debord). Um partido representante do bordiguismo, e ainda muito ativo nos dias atuais, &#233; o Partido Comunista Internacional. Alguns movimentos esquerdo-comunistas, como o comunismo de conselhos e o situacionismo, tamb&#233;m fazem parte do marxismo libert&#225;rio.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607018224151822337/4d2d9b7bac8ac92804bbcc82100cf1d29fd06bfccf95937d21008ea6db4d91a1.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607018224151822337/4d2d9b7bac8ac92804bbcc82100cf1d29fd06bfccf95937d21008ea6db4d91a1.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Conselhismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607018315071881218/c967512a46b5973168d5fd9a28fc87906047c51b2d07c48df8c7ad383462f9b0.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607018315071881218/c967512a46b5973168d5fd9a28fc87906047c51b2d07c48df8c7ad383462f9b0.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Marxismo Libert&#225;rio</strong>
+
+Um conjunto de doutrinas marxistas que se portam como tendo uma cr&#237;tica maior ao autoritarismo (numa conceitua&#231;&#227;o similar ao anarquismo) do que outras correntes marxistas, buscando meios para atingir o comunismo numa revolu&#231;&#227;o &quot;de baixo para cima&quot; (em claro contraste com o vanguardismo leninista). Algumas correntes s&#227;o “an&#225;rquicas” (defendem uma transi&#231;&#227;o direta para o comunismo, sem o “&#250;ltimo uso do Estado” do marxismo tradicional), enquanto outras possuem uma concep&#231;&#227;o de transi&#231;&#227;o socialista que rejeita o centralismo leninista. Inclui desde vertentes mais antigas, como o luxemburguismo e o comunismo de conselhos, at&#233; vertentes mais atuais, como o autonomismo e o situacionismo.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607018421053292552/af0b8bd306ca566b999ee57a38edcc452bae8e033cf703b1294211d416459d31.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607018421053292552/af0b8bd306ca566b999ee57a38edcc452bae8e033cf703b1294211d416459d31.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Humanismo Marxista</strong>
+
+Conjunto de correntes e te&#243;ricos marxistas que deram maior &#234;nfase ao que se costuma chamar de &quot;jovem Marx&quot; (sua obra te&#243;rica da juventude). Uma quest&#227;o importante para tal vertente &#233; o ser do homem e a interfer&#234;ncia da aliena&#231;&#227;o capitalista neste. Humanistas marxistas tendem a criticar o que chamam de &quot;economicismo&quot; de outras vertentes: uma tend&#234;ncia a dar foco exclusivo na constru&#231;&#227;o de elementos superestruturais a partir da estrutura, e ignorar outros fatores da perspectiva marxista quanto &#224; din&#226;mica social  - inclusive o da capacidade do homem de alterar sua pr&#243;pria materialidade pela pr&#225;xis. Gy&#246;rgy L&#250;kacs, Antonio Gramsci, Herbert Marcuse, Jean-Paul Sartre, Erich Fromm e Ernst Bloch s&#227;o alguns de seus nomes mais famosos.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607018985845686273/a878fefc5506fc0db120f950f3d02df41b8e8385b47087680dba0a0709c5363f.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607018985845686273/a878fefc5506fc0db120f950f3d02df41b8e8385b47087680dba0a0709c5363f.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Marxismo Estruturalista/P&#243;s-estruturalista</strong>
+
+Um conjunto diverso de vertentes marxistas influenciados de diferentes maneiras pelo estruturalismo, pelo existencialismo, pela psican&#225;lise, pelo p&#243;s-estruturalismo e pela Escola de Frankfurt. Louis Althusser, Slavoj Žižek, Toni Negri, Michael Hardt, Alain Badiou, Fredric Jameson, Ernesto Laclau, Vladimir Safatle e Mark Fisher s&#227;o algumas figuras importantes desses marxismos.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607019056381558803/472daa049d8aa24b9c04fb8dea69b50ec746953909ecc73a0c8671fb0dd86710.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607019056381558803/472daa049d8aa24b9c04fb8dea69b50ec746953909ecc73a0c8671fb0dd86710.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Autonomismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607019150845411351/2602492bf012997817d744ffb149534869fb59c406ac0cad9e0a8a0967da46b2.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607019150845411351/2602492bf012997817d744ffb149534869fb59c406ac0cad9e0a8a0967da46b2.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Aceleracionismo (de Esquerda)</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607019274984226847/e4c4c4ba11a4d39645a6ec2c5f08424eeddf756b6472c3362b7a9bfd52046457.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607019274984226847/e4c4c4ba11a4d39645a6ec2c5f08424eeddf756b6472c3362b7a9bfd52046457.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Neozapatismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607019657576316938/6acb5c67a73e60aafb93e75698b3b2c3e4b2dd7c43ec6a6efbc23fb683d823b3.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607019657576316938/6acb5c67a73e60aafb93e75698b3b2c3e4b2dd7c43ec6a6efbc23fb683d823b3.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Socialismo Crist&#227;o</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607019814698876940/775881bea9b4ee05a7bb3798006402e4f42b79e4879e5f094585c76a4f6a738a.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607019814698876940/775881bea9b4ee05a7bb3798006402e4f42b79e4879e5f094585c76a4f6a738a.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Ecosocialismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607019923356516352/73ed2f86c85615288a2d092923bccc1eff34db90133631a59ffc1d4a543f2f87.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607019923356516352/73ed2f86c85615288a2d092923bccc1eff34db90133631a59ffc1d4a543f2f87.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo</strong>
+
+O anarquismo &#233; um conjunto de diversas ideologias pol&#237;ticas anti-autorit&#225;rias heterog&#234;neas entre si. S&#227;o tra&#231;os comuns das ideologias anarquistas a defesa da autogest&#227;o, o antiestatismo, o anticapitalismo anti-mercado (como no anarcocomunismo) ou pr&#243;-mercado (como no mutualismo e no agorismo), a rejei&#231;&#227;o de hierarquias e a busca por institui&#231;&#245;es sociais e econ&#244;micas volunt&#225;rias e justas.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607020342933716993/aad3c69c199b6eca450a3c8363c0807f87093c190c4932ae0dadd219603507ed.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607020342933716993/aad3c69c199b6eca450a3c8363c0807f87093c190c4932ae0dadd219603507ed.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo sem Adjetivos</strong>
+
+Anarquismo sintetista/sem adjetivos &#233; o pensamento an&#225;rquico que defende a uni&#227;o de todas as vertentes anarquistas. &#201; baseado principalmente na nega&#231;&#227;o de dogmas e de bandeiras, na estrat&#233;gia de a&#231;&#227;o direta (pac&#237;fica ou violenta) e no combate contra qualquer tipo de autoridade. Os sintetistas acreditam que toda a estrat&#233;gia an&#225;rquica &#233; valida, e que todas as diferentes linhas de pensamento libert&#225;rio n&#227;o s&#227;o divergentes e sim complementares para a liberta&#231;&#227;o dos povos.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607020432184442882/9233f8eba8133fc928f5a19f38785003920918102ef3a49a97c09fe06c1578e0.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607020432184442882/9233f8eba8133fc928f5a19f38785003920918102ef3a49a97c09fe06c1578e0.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo Insurrecion&#225;rio</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607020852461961218/60b252d6ad9b9dd50003f6ec5c58634695f00573e29fb93128f4ba1cc99b5ef4.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607020852461961218/60b252d6ad9b9dd50003f6ec5c58634695f00573e29fb93128f4ba1cc99b5ef4.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Socialismo Libert&#225;rio (ancom/ancol/ansin)</strong>
+
+Corrente de pensamento an&#225;rquica baseada principalmente no socialismo revolucion&#225;rio, por&#233;m rejeitando as no&#231;&#245;es bolcheviques de controle centralizado. Seus adeptos defendem a revolu&#231;&#227;o social por vias aut&#244;nomas, atrav&#233;s da organizac&#227;o sindical e da a&#231;&#227;o direta, se baseando no materialismo filos&#243;fico e na luta de classes. Suas principais correntes, o anarcocomunismo, o anarcocoletivismo e o anarcosindicalismo, diferem dos marxismos libert&#225;rios por beberem mais de autores como Mikhail Bakunin e Piotr Kropotkin, e pelo fato de alguns marxismos libert&#225;rios n&#227;o serem anarquistas.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607020933357764668/9c25faee827b355dfe2303e5a0d022ae1b559bb13d2d2c29c36f0a53dcb00f41.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607020933357764668/9c25faee827b355dfe2303e5a0d022ae1b559bb13d2d2c29c36f0a53dcb00f41.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Mutualismo</strong>
+
+Corrente filos&#243;fica anarquista fundada por Pierre-Joseph Proudhon, baseada no voluntarismo e na ajuda m&#250;tua, defendendo uma s&#237;ntese entre o socialismo revolucion&#225;rio e o liberalismo econ&#244;mico. Os mutualistas defendem um modelo de livre-mercado anti-capitalista sindicalizado e igualit&#225;rio, em que todas as trocas fossem legitimamente volunt&#225;rias e equivalentes.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607021019441397763/902408344816f15a3512a808f7a1b86d184a57a0462c26751f533bf1f9a5745d.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607021019441397763/902408344816f15a3512a808f7a1b86d184a57a0462c26751f533bf1f9a5745d.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarcofeminismo</strong>
+
+Tamb&#233;m conhecido como feminismo libert&#225;rio ou anarcafeminismo, &#233; a corrente de pensamento an&#225;rquica que combate as desigualdades de g&#234;nero, reivindicando pautas como a igualdade salarial, o direito ao aborto, o amor livre e a luta contra o sexismo na grande m&#237;dia. Tamb&#233;m se op&#245;e ao feminismo radical (radfem) e a outras correntes de feminismo materialista e marxistapor ver estes como essencialmente autorit&#225;rios. H&#225; uma vari&#226;ncia te&#243;rica dentro do movimento, tal qual dentro do pr&#243;prio feminismo.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607021109958803467/7ffd67ecca36025a939e57c62174f7d1617af7884c0e93c6177136b609d0d3a4.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607021109958803467/7ffd67ecca36025a939e57c62174f7d1617af7884c0e93c6177136b609d0d3a4.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo Verde</strong>
+
+Tamb&#233;m conhecido como eco-anarquismo, &#233; a corrente filos&#243;fica libert&#225;ria que parte de uma rela&#231;&#227;o respeitosa com a natureza, se opondo &#224;s grandes ind&#250;strias e &#224; produ&#231;&#227;o em massa e difundindo estrat&#233;gias an&#225;rquicas ecol&#243;gicas como as hortas comunit&#225;rias, a energia renov&#225;vel, as eco-vilas e etc… Os adeptos mais radicais (anarcoprimitivistas) pregam a total desvincula&#231;&#227;o com a tecnologia e a civiliza&#231;&#227;o. O comunalismo de Murray Bookchin tamb&#233;m pode ser considerado uma subvertente do eco-anarquismo.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607021484812009485/14ae1feec92b58747d5e4f1ff6c2f9aa15c319e82f70c946e70591c6747878e5.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607021484812009485/14ae1feec92b58747d5e4f1ff6c2f9aa15c319e82f70c946e70591c6747878e5.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo Queer</strong>
+
+Corrente de pensamento libert&#225;rio focada na causa queer, reivindicando pautas como a luta contra a homofobia, a transfobia, a bifobia e outros preconceitos de g&#234;nero e sexualidade, mas de um ponto de vista anticapitalista e revolucion&#225;rio. &#201; fortemente influenciada pela teoria queer, corrente de pensamento nascido do movimento de liberta&#231;&#227;o gay, do feminismo materialista l&#233;sbico e do p&#243;s-estruturalismo, cuja principal contribui&#231;&#227;o reside na cr&#237;tica &#224; categoria “g&#234;nero” e a afirma&#231;&#227;o deste como n&#227;o-essencial e constru&#237;do a partir da intersec&#231;&#227;o e intera&#231;&#227;o entre fatores sociais, culturais, econ&#244;micos, individuais e biol&#243;gicos.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607021553946853378/c59bbd16aacb01b04ef6f3fa8d19d7fc46458627b188c18a2a04fbd9a4b0e3fc.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607021553946853378/c59bbd16aacb01b04ef6f3fa8d19d7fc46458627b188c18a2a04fbd9a4b0e3fc.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo P&#243;s-estruturalista</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                                <span class="chatlog__edited-timestamp" title="02-Aug-19 10:30 PM">(edited)</span>
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607022229611479080/eb7d82d3ba8f94496e724abf07a03d72cc1e1d1a2cbbdbedfeb5894860c6e632.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607022229611479080/eb7d82d3ba8f94496e724abf07a03d72cc1e1d1a2cbbdbedfeb5894860c6e632.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo Transhumanista</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607022315682791454/d49ef577063ad7fd8cf058799d11d9bb36d0ed022527e61c1b0b5f3a0d5fe549.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607022315682791454/d49ef577063ad7fd8cf058799d11d9bb36d0ed022527e61c1b0b5f3a0d5fe549.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarquismo Ego&#237;sta</strong>
+
+Corrente anarquista que prov&#233;m da filosofia ego&#237;sta de Max Stirner. Para este, s&#243; h&#225; o &#218;nico (um conceito pr&#243;ximo, mas n&#227;o id&#234;ntico, ao de Eu ou indiv&#237;duo), e conceitos como “sociedade” e “Estado” s&#227;o meras abstra&#231;&#245;es, “fantasmas” que oprimem o &#218;nico. No lugar de uma sociedade, Stirner defende uma uni&#227;o de ego&#237;stas, um agrupamento que deve ser a toda hora reinstitu&#237;do voluntariamente por seus membros. A partir dessas no&#231;&#245;es, deriva-se um anarquismo ego&#237;sta. Outros anarquismos tamb&#233;m foram influenciados por Max Stirner.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607023086356922369/e71e672f9ab1db1f59cf2f212bf69254feb0894120d99c6e361379105ef2f098.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607023086356922369/e71e672f9ab1db1f59cf2f212bf69254feb0894120d99c6e361379105ef2f098.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarcoindividualismo</strong>
+
+Um conjunto de v&#225;rias ideologias anarquistas heterog&#234;neas que enfatizam o indiv&#237;duo e sua vontade contra ou acima de grupos, da sociedade, de tradi&#231;&#245;es e ideologias. Figuras importantes (nem todas anarquistas ou anarcoindividualistas) s&#227;o William Godwin, Friedrich Nietzsche, Max Stirner, Pierre-Joseph Proudhon, Benjamin Tucker, William Batchelder Greene, Henry David Thoreau, Han Ryner e &#201;mile Armand.</span>
+
+                                <span class="chatlog__edited-timestamp" title="02-Aug-19 10:36 PM">(edited)</span>
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607023867055308812/a59d08b5144ca8e2046f86868a276c7aa0842ecdac03418c7e0bca56a0ccaccc.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607023867055308812/a59d08b5144ca8e2046f86868a276c7aa0842ecdac03418c7e0bca56a0ccaccc.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Anarcopacifismo</strong>
+
+Tend&#234;ncia anarquista que rejeita o uso de meios violentos na derrubada do capital e do Estado. Possui diversas intersec&#231;&#245;es com o anarcoindividualismo (inclusive pela influ&#234;ncia que sofreu do ensaio de Thoreau sobre a desobedi&#234;ncia civil) e se consolidou como vertente durante o per&#237;odo da Nova Esquerda de 1960. H&#225; subvertentes religiosas e anti/irreligiosas dentro do anarcopacifiismo. Figuras importantes (nem todas anarquistas ou anarcopacifistas) s&#227;o Paul Goodman, Dorothy Day, Ammon Hennacy, Charles-Auguste Bontemps, G&#233;rard de Lacaze-Duthiers e Andr&#233; Arru.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024022110208000/5b9f15ed179afe272d92094b8a68147cd479c0ec2789636897c064b32a2b78a3.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024022110208000/5b9f15ed179afe272d92094b8a68147cd479c0ec2789636897c064b32a2b78a3.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Agorismo</strong>
+
+Estrat&#233;gia anarquista fundada por Samuel Edward Konkin III, fortemente influenciada pelo mutualismo, baseada nas pr&#225;ticas contra-econ&#244;micas de mercado anti-capitalista e desregularizado (como o tr&#225;fico e o contrabando). Os agoristas acreditam que a estrat&#233;gia de livre-mercado desregularizado &#233; essencial para emancipa&#231;&#227;o social e conquista da autonomia. O termo vem da palavra grega &quot;&#193;gora&quot;, local aberto para feiras livres e com&#233;rcio independente nas antigas p&#243;lis gregas.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024112749117564/010c92f95e8c7d86da19882ba46fff604210b29decccfebec7d5f637ea6ed7af.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024112749117564/010c92f95e8c7d86da19882ba46fff604210b29decccfebec7d5f637ea6ed7af.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Criptoanarquismo
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024191488786443/16a16011bc1d913dd46436cba7c55dd0e8023c19745798d52f9ed5ee694b1be8.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024191488786443/16a16011bc1d913dd46436cba7c55dd0e8023c19745798d52f9ed5ee694b1be8.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Liberalismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024255296733200/9a8f32666240a62f60d2d792d4eac2302e2cd76b6c1c741e2e883310f22fb461.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024255296733200/9a8f32666240a62f60d2d792d4eac2302e2cd76b6c1c741e2e883310f22fb461.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Socialismo de Mercado</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024325790269440/ea2d7b3c7895ab1c95d0485228bad6fd83d1c196bcd87dcad8322afe9bd8d490.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024325790269440/ea2d7b3c7895ab1c95d0485228bad6fd83d1c196bcd87dcad8322afe9bd8d490.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Austrolibertarianismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024418392375296/969a3a88b4571c47f2da16627885887e7256c296fb8755a4ec8ed2feb80b73c4.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024418392375296/969a3a88b4571c47f2da16627885887e7256c296fb8755a4ec8ed2feb80b73c4.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>???/Indeciso</strong>
+
+A bandeira daqueles que n&#227;o querem revelar sua ideologia pol&#237;tica, n&#227;o se identificaram com nenhuma ideologia disponibilizada por n&#243;s, ou que n&#227;o escolheram alguma.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024580619665418/b071f88f1890987c299dcd02f823d0c4af01d903a03dd9ca01f1276121d5a329.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024580619665418/b071f88f1890987c299dcd02f823d0c4af01d903a03dd9ca01f1276121d5a329.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Social-democracia</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024658671468557/f6d6f76fee7a9587976f5a0c21be8b04977a3697e50dda9547ed889bc6d94d13.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024658671468557/f6d6f76fee7a9587976f5a0c21be8b04977a3697e50dda9547ed889bc6d94d13.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Centrismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024780977111040/bfe9c0c0b323a5cc0731d35ea9ddd772e0cbe937858332886b6a90ad2f47d52a.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024780977111040/bfe9c0c0b323a5cc0731d35ea9ddd772e0cbe937858332886b6a90ad2f47d52a.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Conservadorismo</strong>
+
+[EM CONSTRU&#199;&#195;O]</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/607015361761771549/607024859326709770/03715419da6540ffcd978a5c2082054b7c3618ffa65038bff54dfc9a799c9a1a.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/607015361761771549/607024859326709770/03715419da6540ffcd978a5c2082054b7c3618ffa65038bff54dfc9a799c9a1a.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
